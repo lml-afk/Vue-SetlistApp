@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="Style.css">
+
+<title>Setlist App</title>
+
+</head>
+
+    <body>
+      <h1 class="header"> Setlist App</h1>
+
+
+<div  id="AppBand">
+
+<div class="container">
+
+    <input type="text" v-model="band" placeholder="Type in a band" @keyup.enter="bandSearch()">
+    <button class="button"  type="button" name="button" @click="bandSearch()">Search</button>
+    <button class="button"  type="button" name="button" @click="clear()">Clear User List</button>
+
+</div>
+
+<div class="container">
+
+<ul style="list-style-type:none">
+  <li class=""
+
+    v-for="value in userBand">
+ {{ value }}   <button class="button2"  type="button" name="button" @click="getPlaylist(mbid)">Get Playlist</button>
+  <p> {{ bandDescription }} </p>
+ </li>
+ </ul>
+
+</div>
+
+<div class="listdivband">
+ <ul>
+   <li class="list-group-item"
+    @click="addSong(value)"
+     v-for="value in setlist">
+  {{ value }}
+  </li>
+  </ul>
+</div>
+
+<div class="listdivuser">
+
+  <ul>
+    <li class="list-group-item2"
+     @click="removeSong(value)"
+      v-for="value in userSetlist">
+   {{ value }}
+   </li>
+   </ul>
+
+</div>
+
+
+
+
+
+</div>
+
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="https://unpkg.com/vue"></script>
+      <script src="config.js"></script>
+      <script src="app.js"></script>
+
+  </body>
+  </html>
+
+
+
+    <!--tyhjennys??-->

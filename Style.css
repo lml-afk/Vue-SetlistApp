@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: rgba(0, 128, 0, 0.3);
+  font-size: 14px
+}
+
+.header{
+  text-align: center;
+}
+
+.container{
+    text-align: center;
+    font-size: 20px;
+}
+
+.container2{
+    text-align: center;
+    font-size: 20px;
+}
+
+.button {
+  background-color: grey;
+  border: none;
+  color: lightgreen;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: grey;
+  border: none;
+  color: lightgreen;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: rgba(0, 128, 0, 0.3);
+  font-size: 14px;
+}
+
+.listdivband{
+  width: 500px;
+  z-index: 10;
+  position: fixed;
+  left: 15%;
+  top: 300px;
+}
+
+.listdivuser{
+ width: 500px;
+ z-index: 10;
+ position: fixed;
+ right: 15%;
+ top: 300px;
+}
+
+.list-group-item {
+  padding: 2px;
+  list-style-type: none;
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+.list-group-item2 {
+    padding: 2px;
+  list-style-type: none;
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+.list-group-item:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.list-group-item2:hover {
+  color: red;
+  cursor: pointer;
+}
