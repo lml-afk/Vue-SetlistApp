@@ -3,12 +3,12 @@ const searchUrl ='https://api.setlist.fm/rest/1.0/search/artists?artistName='
 const searchUrlEnd='&p=1&sort=relevance'
 const proxyUrl = "https://lml-afk-cors-proxy.herokuapp.com/"; //proxy needed for api calls from frontend
 
-
+//Url for getting setlist of a band
 function buildSetlistUrl(mbid){
   return proxyUrl + 'https://api.setlist.fm/rest/1.0/artist/' + mbid + '/setlists';
 }
 
-
+// Url for searching for band
 function buildSearchUrl(band) {
   return proxyUrl + searchUrl + band + searchUrlEnd;
 }
@@ -29,9 +29,8 @@ var app = new Vue({
         bandSearch(band){
         this.setlist =[];
         let url = buildSearchUrl(this.band);
-        console.log(url);
         axios.get(url, {
-          headers: {
+          headers: { //header needed for api calls
             'x-api-key': apiKey ,
             'Accept': 'application/json',
           }
@@ -43,7 +42,7 @@ var app = new Vue({
         this.bandDescription = response.data.artist[0].disambiguation;
         this.mbid = response.data.artist[0].mbid;
 
-      }).catch((error) => {console.log(error);this.userBand="";alert("No bands were found"); });
+      }).catch((error) => {console.log(error);this.userBand="";alert("No bands were found"); }); // error message if no band is found
     },
 
     getPlaylist(mbid){
@@ -83,7 +82,5 @@ var app = new Vue({
         this.userSetlist=[];
       },
     },
-
-
 
 })

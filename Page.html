@@ -17,7 +17,7 @@
 <div  id="AppBand">
 
 <div class="container">
-
+<!--Search menu-->
     <input type="text" v-model="band" placeholder="Type in a band" @keyup.enter="bandSearch()">
     <button class="button"  type="button" name="button" @click="bandSearch()">Search</button>
     <button class="button"  type="button" name="button" @click="clear()">Clear User List</button>
@@ -26,6 +26,7 @@
 
 <div class="container">
 
+<!--Display band-->
 <ul style="list-style-type:none">
   <li class=""
 
@@ -37,6 +38,7 @@
 
 </div>
 
+<!--Setlist of band-->
 <div class="listdivband">
  <ul>
    <li class="list-group-item"
@@ -49,6 +51,7 @@
 
 <div class="listdivuser">
 
+ <!--List of user picked songs-->
   <ul>
     <li class="list-group-item2"
      @click="removeSong(value)"
@@ -59,20 +62,12 @@
 
 </div>
 
-
-
-
-
 </div>
 
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
       <script src="https://unpkg.com/vue"></script>
-      <script src="config.js"></script>
+      <script src="config.js"></script>     <!--api key file-->
       <script src="app.js"></script>
 
   </body>
   </html>
-
-
-
-    <!--tyhjennys??-->
